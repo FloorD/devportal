@@ -35,9 +35,13 @@ Destination is a location for notifications to be delivered when an action is tr
 
 1. Open the **Destination** tab and click on **Add destination**
    
-2. **Name** -> ``slack-test``
+2. Fill in the fields:
 
-
+   **Name** -> ``slack-test``
+   
+   **Type** -> ``Slack``
+   
+   **Webhook URL** -> ``https://your_slack_webhook_URL``
 
 .. note::
    Destination Type can be: ``Amazon Chime``, ``Slack``, ``Custom webhook`` or ``Email``
