@@ -9,6 +9,11 @@
 
 
 
+``service_log`` => *['boolean', 'null']*
+  **Service logging** Store logs for the service so that they are available in the HTTP API and console.
+
+
+
 ``static_ips`` => *boolean*
   **Static IP addresses** Use static public IP addresses
 
@@ -21,10 +26,27 @@
     **The maximum number of series fetched in single query.** 
 
   ``query_docs`` => *integer*
-    **The maximum number of docs fetched in single query. Default=0(unlimited).** 
+    **The maximum number of docs fetched in single query.** 
 
   ``query_require_exhaustive`` => *boolean*
-    **Require exhaustive result** When query limits are exceeded, whether to return error (if True) or return partial results (False)
+    **Require exhaustive result** When query limits are exceeded, whether to return error or return partial results.
+
+  ``max_recently_queried_series_disk_bytes_read`` => *integer*
+    **The maximum number of disk bytes that can be read in a given lookback period.** 
+
+  ``max_recently_queried_series_blocks`` => *integer*
+    **The maximum number of blocks that can be read in a given lookback period.** 
+
+  ``max_recently_queried_series_lookback`` => *string*
+    **The lookback period for 'max_recently_queried_series_blocks' and 'max_recently_queried_series_disk_bytes_read'.** 
+
+
+
+``m3`` => *object*
+  **M3 specific configuration options** 
+
+  ``tag_options`` => *object*
+    **M3 Tag Options** 
 
 
 
@@ -46,6 +68,11 @@
 
   ``m3coordinator`` => *boolean*
     **Allow clients to connect to m3coordinator from the public internet for service nodes that are in a project VPC or another type of private network** 
+
+
+
+``additional_backup_regions`` => *array*
+  **Additional Cloud Regions for Backup Replication** 
 
 
 
