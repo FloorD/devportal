@@ -1,6 +1,16 @@
 
+``additional_backup_regions`` => *array*
+  **Additional Cloud Regions for Backup Replication** 
+
+
+
 ``ip_filter`` => *array*
   **IP filter** Allow incoming connections from CIDR address block, e.g. '10.20.0.0/16'
+
+
+
+``service_log`` => *['boolean', 'null']*
+  **Service logging** Store logs for the service so that they are available in the HTTP API and console.
 
 
 
@@ -123,7 +133,7 @@
     **innodb_change_buffer_max_size** Maximum size for the InnoDB change buffer, as a percentage of the total size of the buffer pool. Default is 25
 
   ``innodb_flush_neighbors`` => *integer*
-    **innodb_flush_neighbors** Specifies whether flushing a page from the InnoDB buffer pool also flushes other dirty pages in the same extent (default is 1): 0 - dirty pages in the same extent are not flushed,  1 - flush contiguous dirty pages in the same extent,  2 - flush dirty pages in the same extent
+    **innodb_flush_neighbors** Specifies whether flushing a page from the InnoDB buffer pool also flushes other dirty pages in the same extent (default is 1): 0 - dirty pages in the same extent are not flushed, 1 - flush contiguous dirty pages in the same extent, 2 - flush dirty pages in the same extent
 
   ``innodb_ft_min_token_size`` => *integer*
     **innodb_ft_min_token_size** Minimum length of words that are stored in an InnoDB FULLTEXT index. Changing this parameter will lead to a restart of the MySQL service.
@@ -132,7 +142,7 @@
     **innodb_ft_server_stopword_table** This option is used to specify your own InnoDB FULLTEXT index stopword list for all InnoDB tables.
 
   ``innodb_lock_wait_timeout`` => *integer*
-    **innodb_lock_wait_timeout** The length of time in seconds an InnoDB transaction waits for a row lock before giving up.
+    **innodb_lock_wait_timeout** The length of time in seconds an InnoDB transaction waits for a row lock before giving up. Default is 120.
 
   ``innodb_log_buffer_size`` => *integer*
     **innodb_log_buffer_size** The size in bytes of the buffer that InnoDB uses to write to the log files on disk.
